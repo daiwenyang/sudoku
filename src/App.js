@@ -28,6 +28,9 @@ export default class App extends React.Component{
   
   keyBoardClick=(num)=>{
     const {list,selectedKey} = this.state;
+    if(selectedKey.length === 0){
+      return
+    }
     list[selectedKey[0]][selectedKey[1]].value = num;
     this.setState({
       list
