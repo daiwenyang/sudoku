@@ -10,9 +10,11 @@ function getRandomNum(max){
 
 export function ForEach(array,action){
    array.forEach(item=>{
-      item.forEach(value=>{
-         action(value)
-      })
+      if(Object.prototype.toString.call(item) === "[object Array]"){
+         ForEach(item,action)
+      }else{
+         action(item)
+      }
    })
 }
 
