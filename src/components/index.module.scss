@@ -1,0 +1,84 @@
+.sudo-table-container{
+    padding:0.5rem;
+    font-size:0.6rem;
+    box-sizing: border-box;
+    .row{
+        display:flex;
+        width:100%;
+        border-left:4px solid #333;
+        border-right:4px solid #333;
+        box-sizing: border-box;
+        .cell{
+            width:1rem;
+            text-align: center;
+            vertical-align: middle;
+            height:1rem;
+            line-height:1rem;
+            box-sizing: border-box;
+            border-right:1px solid #333;
+            border-bottom:1px solid #333;
+            color:#333333;
+            font-weight:500;
+            &:last-of-type{
+                border-right:none;
+            }
+            &:nth-child(3n){
+                border-right:4px solid #333;
+            }
+            &:last-child{
+                border-right:none;
+            }
+        }
+        &:last-of-type{
+            border-bottom:4px solid #333;
+            .cell{
+                border-bottom:none;
+            }
+        }
+        &:first-of-type{
+            border-top:4px solid #333;
+        }
+        &:nth-child(3n){
+            border-bottom:4px solid #333;
+            .cell{
+                border-bottom:none;
+            }
+        }
+        .selected{
+            background-color:#ddd;
+            color:#40a9ff;
+        }
+        .fill-num{
+            color:#666666;
+            font-weight:normal;
+            font-size:0.5rem;
+        }
+        
+    }
+}
+
+.key-board-container{
+    display:flex;
+    justify-content: center;
+    .item{
+        width:1rem;
+        height:1rem;
+        line-height:1rem;
+        font-size:0.6rem;
+        border:1px solid #ccc;
+        border-right:none;
+        box-sizing: border-box;
+        color:#666666;
+        &:last-of-type{
+            border-right:1px solid #ccc;
+        }
+        &:hover{
+            color:#40a9ff;
+            border:1px solid #40a9ff;
+        }
+        &[disabled]:hover{
+            color:#666666;
+            border:1px solid #ccc;
+        }
+    }
+}
